@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
     let headerTabs = document.querySelectorAll('.glazing_block'),
-        infoHeader = document.querySelector('.glazing_slider'),
         headerTabsLinks = document.querySelectorAll('.glazing_block a'),
         tabs = document.querySelectorAll('section.glazing div.row');
     
@@ -14,16 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     showTab(0);
-
-    // infoHeader.addEventListener('click', function(event){
-    //     let target = event.target;
-    //         for (let i = 0; i < headerTabs.length; ++i){
-    //             if (target == headerTabs[i]){
-    //                 showTab(i);
-    //                 return;        
-    //             }
-    //         }
-    // });
     
     headerTabs.forEach(function(item, index){
         item.addEventListener('click', function(event){
@@ -38,6 +27,6 @@ document.addEventListener('DOMContentLoaded', function(){
             }
             
             
-        })
+        });
     });
 });

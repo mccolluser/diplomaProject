@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         forms = document.forms;
 
     btn.addEventListener('click', function () {
+        cleanStatusForm();
         modalWindowOverlay.style.display = 'block';
     });
     popupClose.forEach(function (item) {
@@ -15,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
             popupOverlay.style.display = 'none';
         });
     });
+
+    function cleanStatusForm(){
+        let allStatuses = document.querySelectorAll('.status');
+        allStatuses.forEach(function(item){
+            item.innerHTML = '';
+        })
+    }
 
     function closeOverlay(event) {
         for (let i = 0; i < popupContent.length; ++i) {
@@ -31,9 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let links = document.querySelectorAll('a.phone_link');
 
     links.forEach(function (item) {
+        cleanStatusForm();
         item.addEventListener('click', function () {
             popupOverlay.style.display = 'block';
-        })
+        });
     });
     // запрет на ввод не цифр
     let inputUserPhone = document.querySelectorAll('input[name="user_phone"]');

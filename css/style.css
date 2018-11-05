@@ -11,6 +11,10 @@ body {
   font-style: normal;
   color: #000000;
 }
+.status {
+  display: block;
+  color: red;
+}
 a:hover {
   text-decoration: none;
 }
@@ -725,7 +729,7 @@ textarea:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40rem;
+  width: 44rem;
   padding: 1rem 0.5rem 4rem;
   background-color: #ffffff;
 }
@@ -751,6 +755,10 @@ textarea:focus {
 }
 .popup_calc_content #type1 {
   display: inline-block;
+}
+.do_image_more{
+  width: 110px;
+  height: 70px;
 }
 .popup_calc_close {
   position: absolute;
@@ -844,10 +852,13 @@ textarea:focus {
   bottom: 0;
   left: 0;
 }
-.popup_calc_profile_content .checkbox:checked + .checkbox-custom[id="cold"]::before {
+.checkbox-custom[id="cold"]::before {
   background: url(../img/modal_calc/check.png) center center no-repeat;
 }
-.popup_calc_profile_content .checkbox:checked + .checkbox-custom[id="warm"]::before {
+.no-background{
+  background: url();
+}
+.checkbox-custom[id="warm"]::before {
   background: url(../img/modal_calc/check_warm.png) center center no-repeat;
 }
 .popup_calc_profile_content .label {
@@ -1397,7 +1408,7 @@ textarea:focus {
     background: transparent;
   }
   .popup_calc_content {
-    width: 31rem;
+    width: 42rem;
   }
   .popup_calc_content h2 {
     margin-bottom: 2rem;
