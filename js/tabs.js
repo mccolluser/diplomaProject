@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tabs[index].style.display = 'block';
         headerTabsLinks[index].classList.add('active');
     }
-
+    
     showTab(0);
 
     headerTabs.forEach(function (item, index) {
