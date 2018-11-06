@@ -130,16 +130,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     showEndCalcFormBtn.addEventListener('click', function () {
+        let selectedGlazingType = document.getElementById('view_type').value;
+        let glazingProfile = document.querySelectorAll('.checkbox-custom')[currentCheckBox].getAttribute('id');
+        objData.glazingProfile = glazingProfile;
+        objData.glazingType = selectedGlazingType;
+
+        if (selectedGlazingType == 'plastic' && glazingProfile == 'cold'){
+            alert('Для данного типа остекления можно вырать только теплый профиль');
+            return;
+        }
+
         popupCalcProfile.style.display = 'none';
         document.getElementById('view_type').selectedIndex = 0;
         for (let i = 0; i < checkBoxInputs.length; ++i) {
             checkBoxInputs[i].checked = false;
         }
 
-        let selectedGlazingType = document.getElementById('view_type').value;
-        let glazingProfile = document.querySelectorAll('.checkbox-custom')[currentCheckBox].getAttribute('id');
-        objData.glazingProfile = glazingProfile;
-        objData.glazingType = selectedGlazingType;
 
         popupCalcEndForm.style.display = 'block';
         document.body.style.overflow = "hidden";
