@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function  tabs () {
     let headerTabs = document.querySelectorAll('.glazing_block'),
         headerTabsLinks = document.querySelectorAll('.glazing_block a'),
         tabs = document.querySelectorAll('section.glazing div.row');
@@ -61,30 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
+}
+module.exports = tabs;

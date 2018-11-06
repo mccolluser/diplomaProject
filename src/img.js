@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+function img(){
     let images = document.querySelectorAll('.works .col-lg-3');
     let worksDiv = document.querySelector('.works');
 
@@ -29,4 +29,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
         });
     });
-});
+}
+module.exports = img;

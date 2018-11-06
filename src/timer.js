@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+function timer(){
     let timeOut = 60000;
     setTimeout(function(){
         let popup = document.querySelector('.popup');
@@ -82,4 +82,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }
     setClock('timer', deadline);
-});
+}
+module.exports = timer;

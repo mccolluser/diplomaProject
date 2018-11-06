@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function mainScript () {
     let btn = document.querySelector('.header_btn.text-uppercase.text-left.popup_engineer_btn'),
         modalWindowOverlay = document.querySelector('.popup_engineer'),
         popupContent = document.querySelectorAll('.popup_content.text-center'),
@@ -115,4 +115,5 @@ document.addEventListener('DOMContentLoaded', function () {
             
         });
     }
-});
+}
+module.exports = mainScript;

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function calc () {
     let popupCalcForm = document.querySelector('.popup_calc'),
         popupCalcFormInputs = document.querySelectorAll('.popup_calc input'),
         popupCalcFormBtn = document.querySelector('button.popup_calc_button'),
@@ -202,4 +202,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     }
-});
+}
+module.exports = calc;
