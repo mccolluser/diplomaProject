@@ -713,13 +713,10 @@ textarea:focus {
 }
 .numbers1 {
   display: block;
-  float: left;
-  width: 70px;
-  height: 50px;
-  
+  float: left;  
   color: white;
   font-size: 40px;
-  /* margin: 0px 7px; */
+  margin-right: 10px;
 }
 
 .timer1 span{
