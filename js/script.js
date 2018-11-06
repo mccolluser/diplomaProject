@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         modalWindowOverlay.style.display = 'none';
         popupOverlay.style.display = 'none';
+        document.body.style.overflow = '';
     }
     modalWindowOverlay.addEventListener('click', closeOverlay);
     popupOverlay.addEventListener('click', closeOverlay);
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     links.forEach(function (item) {
         cleanStatusForm();
         item.addEventListener('click', function () {
+            document.body.style.overflow = 'hidden';
             popupOverlay.style.display = 'block';
         });
     });
