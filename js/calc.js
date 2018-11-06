@@ -30,12 +30,15 @@ document.addEventListener('DOMContentLoaded', function(){
         previewImage[index].style.display = 'inline-block';
     }
     popupCalcFormBtns.forEach(function(item){
+        
         item.addEventListener('click', () => {
             popupCalcForm.style.display = 'block';
+            document.body.style.overflow = "hidden";
 
             popupCalcFormClose.addEventListener('click', () => {
                 clearObjData();
                 popupCalcForm.style.display = 'none';
+                document.body.style.overflow = "";
             });
             previewIcons.forEach(function(item, index){
                 item.addEventListener('click', function(event){
@@ -47,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 item.addEventListener('keypress', function(event){
                     event.preventDefault();
                     if (/\d/.test(event.key)) {
-                        item.value += event.key;
+                        this.value += event.key;
                     } else {
                         return;
                     }
@@ -69,12 +72,12 @@ document.addEventListener('DOMContentLoaded', function(){
     popupCalcProfileClose.addEventListener('click', function(){
         clearObjData();
         popupCalcProfile.style.display = 'none';
+        document.body.style.overflow = "";
     });
     checkBoxLabels.forEach(function(item, index){
         item.addEventListener('click', function(){
             checkBoxInputs[(index + 1) % 2].checked = false;
         });
-        
     });
 
     let popupCalcEndClose = document.querySelector('.popup_calc_end_close'),
@@ -84,9 +87,11 @@ document.addEventListener('DOMContentLoaded', function(){
     showEndCalcFormBtn.addEventListener('click', function(){
         popupCalcProfile.style.display = 'none';
         popupCalcEndForm.style.display = 'block';
+        document.body.style.overflow = "hidden";
     });
     popupCalcEndClose.addEventListener('click', function(){
         popupCalcEndForm.style.display = 'none';
+        document.body.style.overflow = "";
     });
     let popupCalcEndSubmitBtn = document.querySelector('.popup_calc_end button[name="submit"]');
     popupCalcEndSubmitBtn.addEventListener('click', function(event){

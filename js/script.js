@@ -5,15 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
         popupClose = document.querySelectorAll('.popup_close'),
         popupOverlay = document.querySelector('.popup'),
         forms = document.forms;
-
+        
     btn.addEventListener('click', function () {
         cleanStatusForm();
         modalWindowOverlay.style.display = 'block';
+        document.body.style.overflow = "hidden";
     });
+    
     popupClose.forEach(function (item) {
         item.addEventListener('click', () => {
             modalWindowOverlay.style.display = 'none';
             popupOverlay.style.display = 'none';
+            document.body.style.overflow = "";
         });
     });
 
