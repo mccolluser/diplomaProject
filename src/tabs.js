@@ -14,7 +14,7 @@ function  tabs () {
     
     showTab(0);
 
-    headerTabs.forEach(function (item, index) {
+    headerTabs.forEach((item) => {
         item.addEventListener('click', function (event) {
             let target = event.target;
             if (target.classList.contains('glazing_block') || target.parentElement.classList.contains('glazing_block')) {
@@ -48,8 +48,8 @@ function  tabs () {
 
     showTabSecond(0);
 
-    headerTabsSecond.forEach(function (item, index) {
-        item.addEventListener('click', function (event) {
+    headerTabsSecond.forEach((item) => {
+        item.addEventListener('click',  (event) => {
             let target = event.target;
             for (let i = 0; i < headerTabsSecond.length; ++i) {
                 if (target == headerTabsSecond[i] || target.parentElement == headerTabsSecond[i] ||

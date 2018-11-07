@@ -1,6 +1,6 @@
 function timer(){
     let timeOut = 60000;
-    setTimeout(function(){
+    setTimeout(() =>{
         let popup = document.querySelector('.popup');
         popup.style.display = 'block';
     }, timeOut);
@@ -24,14 +24,6 @@ function timer(){
         };
     }
 
-    function getNumbers(numbers){
-        let tmp = "";
-        for (let i = 0; i < numbers.childNodes.length; ++i){
-            tmp += numbers.childNodes[i].innerHTML;
-        }
-        return tmp;
-        
-    }
     function setNumbersOnTimer(element, number){ 
         let numbers = [];
         while(true){

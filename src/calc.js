@@ -69,7 +69,7 @@ function calc () {
             }
         });
     });
-    popupCalcFormBtns.forEach(function (item) {
+    popupCalcFormBtns.forEach(item => {
 
         item.addEventListener('click', () => {
             popupCalcForm.style.display = 'block';
@@ -85,14 +85,14 @@ function calc () {
                 popupCalcForm.style.display = 'none';
                 document.body.style.overflow = "";
             });
-            previewIcons.forEach(function (item, index) {
+            previewIcons.forEach((item, index) => {
                 item.addEventListener('click', function (event) {
                     event.preventDefault();
                     showPreviewIcon(index);
                 });
             });
 
-            popupCalcFormBtn.addEventListener('click', function () {
+            popupCalcFormBtn.addEventListener('click',  () => {
                 popupCalcForm.style.display = 'none';
 
                 objData.width = +popupCalcFormInputs[0].value;
@@ -107,7 +107,7 @@ function calc () {
             });
         });
     });
-    popupCalcProfileClose.addEventListener('click', function () {
+    popupCalcProfileClose.addEventListener('click',  () => {
         clearObjData();
         document.getElementById('view_type').selectedIndex = 0;
         for (let i = 0; i < checkBoxInputs.length; ++i) {
@@ -118,7 +118,7 @@ function calc () {
         document.body.style.overflow = "";
     });
     checkBoxLabels.forEach(function (item, index) {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', () => {
             currentCheckBox = index;
             checkBoxInputs[(index + 1) % 2].checked = false;
         });
@@ -129,7 +129,7 @@ function calc () {
         popupCalcEndFormForm = document.querySelector(".popup_calc_end form");
 
 
-    showEndCalcFormBtn.addEventListener('click', function () {
+    showEndCalcFormBtn.addEventListener('click', () => {
         let selectedGlazingType = document.getElementById('view_type').value;
         let glazingProfile = document.querySelectorAll('.checkbox-custom')[currentCheckBox].getAttribute('id');
         objData.glazingProfile = glazingProfile;
@@ -150,13 +150,13 @@ function calc () {
         popupCalcEndForm.style.display = 'block';
         document.body.style.overflow = "hidden";
     });
-    popupCalcEndClose.addEventListener('click', function () {
+    popupCalcEndClose.addEventListener('click',  () => {
         clearObjData();
         popupCalcEndForm.style.display = 'none';
         document.body.style.overflow = "";
     });
     let popupCalcEndSubmitBtn = document.querySelector('.popup_calc_end button[name="submit"]');
-    popupCalcEndSubmitBtn.addEventListener('click', function (event) {
+    popupCalcEndSubmitBtn.addEventListener('click',  (event) => {
         event.preventDefault();
         objData.name = document.querySelector('.popup_calc_end input[name="user_name"]').value;
         objData.phone = document.querySelector('.popup_calc_end input[name="user_phone"]').value;
@@ -184,7 +184,7 @@ function calc () {
 
         request.send(jsonData);
 
-        request.addEventListener('readystatechange', function () {
+        request.addEventListener('readystatechange',  () => {
             if (request.readyState < 4) {
                 statusMessage.innerHTML = message.loading;
             } else if (request.readyState === 4 && request.status == 200) {

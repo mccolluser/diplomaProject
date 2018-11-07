@@ -2,13 +2,12 @@ function img(){
     let images = document.querySelectorAll('.works .col-lg-3');
     let worksDiv = document.querySelector('.works');
 
-    images.forEach(function(item){
+    images.forEach((item) =>{
         item.addEventListener('click', function(){
             event.preventDefault();
             let overlay = document.querySelector('.overlay'),
                 image = this.children[0].children[1],
                 srcImage = image.getAttribute('src');
-            
             
             overlay.style.display = 'block';
             let creatingImage = document.createElement('img');
@@ -30,4 +29,8 @@ function img(){
         });
     });
 }
+// document.addEventListener('DOMContentLoaded', () => {
+//     img();
+// });
+
 module.exports = img;

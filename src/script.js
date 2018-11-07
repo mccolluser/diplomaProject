@@ -42,9 +42,10 @@ function mainScript () {
 
     let links = document.querySelectorAll('a.phone_link');
 
-    links.forEach(function (item) {
+    links.forEach((item) => {
         cleanStatusForm();
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
             document.body.style.overflow = 'hidden';
             popupOverlay.style.display = 'block';
         });
